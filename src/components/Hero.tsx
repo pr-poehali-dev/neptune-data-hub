@@ -1,5 +1,6 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
+import BookingForm from "./BookingForm";
 
 export default function Hero() {
   const container = useRef<HTMLDivElement>(null);
@@ -25,13 +26,14 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="relative z-10 text-center text-white">
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6">
+      <div className="relative z-10 text-center text-white px-6 w-full max-w-7xl">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4">
           НАЙДИ СВОЙ ОТЕЛЬ
         </h1>
-        <p className="text-lg md:text-xl max-w-2xl mx-auto px-6 opacity-90">
+        <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 mb-8">
           Тысячи проверенных отелей по всему миру. Бронируй лучшее за минуту
         </p>
+        <BookingForm />
       </div>
     </div>
   );
